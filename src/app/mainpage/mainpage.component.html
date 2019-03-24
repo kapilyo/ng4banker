@@ -1,0 +1,9 @@
+<h3>Article Details</h3>
+<table>
+  <tr><th> Id</th> <th>Title</th><th>Category</th></tr>
+  <tr *ngFor="let article of articlesArray" >
+        <td>{{article.id}}</td>
+        <td>{{article.title}}</td>
+        <td>{{article.category}}</td>
+  </tr>
+</table>

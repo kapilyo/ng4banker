@@ -1,0 +1,43 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Android AsyncTask Example",
+      "category": "Android"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "card_id": 1,
+      "card_service": "sbi",
+      "card_type": "debit",
+      "card_name": "kapil2",
+      "card_num": "x-x-x-1"
+    },
+    {
+      "id": 2,
+      "card_id": 2,
+      "card_service": "icici",
+      "card_type": "debit",
+      "card_name": "kapil",
+      "card_num": "x-x-x-2"
+    },
+    {
+      "id": 3,
+      "card_id": 3,
+      "card_service": "canara",
+      "card_type": "debit",
+      "card_name": "kapil3",
+      "card_num": "x-x-x-3"
+    },
+    {
+      "id": 4,
+      "card_id": 4,
+      "card_service": "hdfc",
+      "card_type": "credit",
+      "card_name": "kapil4",
+      "card_num": "x-x-x-4"
+    }
+  ]
+}

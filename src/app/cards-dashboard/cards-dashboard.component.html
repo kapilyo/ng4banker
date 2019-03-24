@@ -1,0 +1,71 @@
+<section class="cards-section">
+  <div class="cards-outer-block">
+    <div
+      *ngFor="let card of cardsArray"
+      class="card-block"
+      [class.selected]="card === selectedCard"
+      (click)="onSelectCard(card)"
+    >
+      <ul>
+        <li class="hidden">
+          {{ card.card_id }}
+        </li>
+        <li>
+          {{ card.card_service }}
+        </li>
+        <li>
+          {{ card.card_type }}
+        </li>
+        <li>
+          {{ card.card_name }}
+        </li>
+        <li>
+          {{ card.card_num }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cards-container">
+    <div class="add-card-block">
+      <button (click)="AddCard()">Add Card</button>
+      <form
+        [formGroup]="cardForm"
+        (ngSubmit)="onCardSubmit(cardForm.value)"
+        *ngIf="enableAddCard"
+      >
+        <h5>Add Card <span class="cross" (click)="AddCard()">x</span></h5>
+        <input
+          type="text"
+          formControlName="card_service"
+          placeholder="card_service"
+          value=""
+        />
+        <input
+          type="text"
+          formControlName="card_type"
+          placeholder="card_type"
+          value=""
+        />
+        <input
+          type="text"
+          formControlName="card_name"
+          placeholder="card_name"
+          value=""
+        />
+        <input
+          type="text"
+          formControlName="card_num"
+          placeholder="card_num"
+          value=""
+        />
+
+        <button [disabled]="!cardForm.valid" type="submit">Save Card</button>
+      </form>
+    </div>
+
+    <div class="cards-detail-block" *ngIf="selectedCard">
+      <h4>{{ selectedCard.card_name }}</h4>
+    </div>
+  </div>
+</section>

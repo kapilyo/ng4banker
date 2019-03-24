@@ -1,0 +1,24 @@
+
+
+
+<form [formGroup]="loginform" class="example-form" (ngSubmit)='loginClick(loginform.value)' autocomplete="off">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1 -1 2 2">
+      <g id="rotate-clockwise">
+        <circle r="1" transform="scale(0.8)" stroke-width="0.025"/>
+        <circle r="1" transform="scale(0.5)" stroke-width="0.04"/>
+      </g>
+      <g id="rotate-counter-clockwise">
+        <circle r="1" transform="scale(0.6)" stroke-width="0.03333"/>
+        <circle r="1" transform="scale(0.3333)" stroke-width="0.06"/>
+      </g>
+    </svg>
+  <mat-form-field class="login-full-width">
+    <input type='text' autocomplete="false" matInput formControlName="username" placeholder="username" value="">
+  </mat-form-field>
+  <mat-form-field class="login-full-width">
+    <input type='password' autocomplete="false" matInput formControlName="password" placeholder="password" value="">
+  </mat-form-field>
+
+  <button [disabled]="!loginform.valid"  type='submit' mat-raised-button color="primary">Login</button>
+
+</form>
