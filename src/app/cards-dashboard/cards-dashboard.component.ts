@@ -1,3 +1,4 @@
+// json-server --watch db.json
 import { Component, OnInit } from '@angular/core';
 import { Cards } from '../models/cards';
 import { CardsService } from '../services/cards.service';

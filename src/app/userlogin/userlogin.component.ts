@@ -32,7 +32,7 @@ export class UserloginComponent implements OnInit {
 
   loginClick(formdata) {
     if (formdata.username === 'kapilz' && formdata.password === 'password') {
-      this.router.navigate(['app-mainpage']);
+      this.router.navigate(['card-dashboard']);
     }
   }
 

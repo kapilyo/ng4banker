@@ -1,22 +1,13 @@
 .example-form {
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  position: absolute;
   top: 0;
   width: 100%;
-  background: rgba(2,94,179,1);
-background: -moz-linear-gradient(-45deg, rgba(2,94,179,1) 0%, rgba(0,34,71,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(2,94,179,1)), color-stop(100%, rgba(0,34,71,1)));
-background: -webkit-linear-gradient(-45deg, rgba(2,94,179,1) 0%, rgba(0,34,71,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(2,94,179,1) 0%, rgba(0,34,71,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(2,94,179,1) 0%, rgba(0,34,71,1) 100%);
-background: linear-gradient(135deg, rgba(2,94,179,1) 0%, rgba(0,34,71,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#025eb3', endColorstr='#002247', GradientType=1 );
-  z-index: 1;
+   background: linear-gradient(135deg, rgb(187, 150, 255) 0%, rgb(102, 108, 255) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#025eb3', endColorstr='#002247', GradientType=1 );
 }
 
 .login-full-width {
@@ -72,5 +63,35 @@ circle
 
 
 .mat-form-field-label, .mat-form-field-label-wrapper, .mat-input-element{
-  color: #478aca;
+  color: #0c1430;
+}
+
+.mat-raised-button.mat-primary[disabled]{
+  color: #ae9eff;
+}
+
+
+.flex-outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.flex-logo{
+  background: url('../../assets/logo.png'), #0c1430;
+  /* background-size: contain; */
+  background-size: 400px;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: 50% 50%;
+}
+
+.flex-50{
+  width: 50%;
+}
+
+
+.flex-50 .mat-raised-button.mat-primary {
+  background-color: #570d9c;
 }
