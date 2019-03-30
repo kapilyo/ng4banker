@@ -13,7 +13,7 @@
       "card_service": "sbi",
       "card_type": "debit",
       "card_name": "kapil2",
-      "card_num": "x-x-x-1"
+      "card_num": "3454"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "card_service": "icici",
       "card_type": "debit",
       "card_name": "kapil",
-      "card_num": "x-x-x-2"
+      "card_num": "5463"
     },
     {
       "id": 3,
@@ -29,7 +29,7 @@
       "card_service": "canara",
       "card_type": "debit",
       "card_name": "kapil3",
-      "card_num": "x-x-x-3"
+      "card_num": "5463"
     },
     {
       "id": 4,
@@ -37,23 +37,15 @@
       "card_service": "hdfc",
       "card_type": "credit",
       "card_name": "kapil4",
-      "card_num": "x-x-x-4"
+      "card_num": "5463"
     },
     {
-      "card_service": "hdfc",
-      "card_type": "asd",
-      "card_name": "asd",
-      "card_num": "asd",
+      "card_service": "Andhra",
+      "card_type": "debit",
+      "card_name": "Kapil json",
+      "card_num": "6583",
       "card_id": 5,
       "id": 5
-    },
-    {
-      "card_service": "hdfc",
-      "card_type": "asd",
-      "card_name": "asd",
-      "card_num": "asd",
-      "card_id": 5,
-      "id": 6
     }
   ]
 }
