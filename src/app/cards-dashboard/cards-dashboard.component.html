@@ -1,27 +1,21 @@
 <section class="cards-section">
   <div class="cards-outer-block">
-    <div
-      *ngFor="let card of cardsArray"
-      class="card-block"
-      [class.selected]="card === selectedCard"
-      (click)="onSelectCard(card)"
-    >
+    <div *ngFor="let card of cardsArray" class="card-block" [class.selected]="card === selectedCard"
+      (click)="onSelectCard(card)">
       <ul>
+        <li><span class="visa-card"></span>
+          <span class="card-type"> {{ card.card_type }}</span><span class="master-card"></span></li>
         <li class="hidden">
           {{ card.card_id }}
         </li>
+        <li class="card-num">
+            {{ card.card_num | CardPipe}}
+          </li>
         <li>
-          {{ card.card_service }}
-        </li>
-        <li>
-          {{ card.card_type }}
-        </li>
-        <li>
-          {{ card.card_name }}
-        </li>
-        <li>
-          {{ card.card_num }}
-        </li>
+          <label>CARD HOLDER</label>
+            {{ card.card_name | uppercase }}
+          </li>
+        <span class="card-service" [attr.title] = card.card_service></span>
       </ul>
     </div>
   </div>
@@ -29,36 +23,12 @@
   <div class="cards-container">
     <div class="add-card-block">
       <button (click)="AddCard()">Add Card</button>
-      <form
-        [formGroup]="cardForm"
-        (ngSubmit)="onCardSubmit(cardForm.value)"
-        *ngIf="enableAddCard"
-      >
+      <form [formGroup]="cardForm" (ngSubmit)="onCardSubmit(cardForm.value)" *ngIf="enableAddCard">
         <h5>Add Card <span class="cross" (click)="AddCard()">x</span></h5>
-        <input
-          type="text"
-          formControlName="card_service"
-          placeholder="card_service"
-          value=""
-        />
-        <input
-          type="text"
-          formControlName="card_type"
-          placeholder="card_type"
-          value=""
-        />
-        <input
-          type="text"
-          formControlName="card_name"
-          placeholder="card_name"
-          value=""
-        />
-        <input
-          type="text"
-          formControlName="card_num"
-          placeholder="card_num"
-          value=""
-        />
+        <input type="text" formControlName="card_service" placeholder="card_service" value="" />
+        <input type="text" formControlName="card_type" placeholder="card_type" value="" />
+        <input type="text" formControlName="card_name" placeholder="card_name" value="" />
+        <input type="text" formControlName="card_num" placeholder="card_num" value="" />
 
         <button [disabled]="!cardForm.valid" type="submit">Save Card</button>
       </form>

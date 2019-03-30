@@ -1,19 +1,8 @@
 .cards-section {
   /* background: #151936; */
-
-  background-image: linear-gradient(to right, #b2e1e8, #c5a6a6);
-  background: #4ca1af; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #c4e0e5,
-    #4ca1af
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #c4e0e5,
-    #4ca1af
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  /* background-image: linear-gradient(to right, #b2e1e8, #c5a6a6); */
+  /* background: linear-gradient(135deg, rgb(208, 189, 249) 0%, rgb(125, 226, 255) 100%); */
+  background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(202, 202, 202) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -41,9 +30,9 @@
 }
 
 .card-block.selected {
-  background: linear-gradient(to right, #b98b79, #e6754c);
+  background: linear-gradient(to right, #f76f6f, #b34f4f);
   max-width: 240px;
-  height: 110px;
+  min-height: 110px;
   /* transform: rotateY(20deg); */
 }
 
@@ -51,17 +40,24 @@
   margin: 0px;
   list-style: none;
   padding: 0px;
+  font-size: 13px;
+}
+
+.card-block ul li label {
+  opacity: 0.5;
+  display: block;
+  font-size: 10px;
 }
 
 .hidden {
   display: none;
 }
 
-span.cross{
+span.cross {
   position: absolute;
-    right: 8px;
-    top: 8px;
-    cursor: pointer;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
 }
 
 .add-card-block {
@@ -117,4 +113,52 @@ span.cross{
 
 .add-card-block form button {
   max-width: 200px;
+}
+
+.master-card {
+  background-image: url('../../assets/mastercard.png');
+  width: 60px;
+  background-size: contain;
+  display: block;
+  height: 40px;
+  background-repeat: no-repeat;
+  float: right;
+}
+
+.visa-card {
+  background-image: url('../../assets/logo-visa.png');
+  width: 60px;
+  background-size: contain;
+  display: inline-block;
+  height: 40px;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.card-block ul li.card-num {
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.card-type {
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0.5;
+}
+
+.card-service::after{
+  position: absolute;
+  content: attr(title);
+  width: 110px;
+  right: 10px;
+  bottom: 5px;
+  font-size: 20px;
+  text-align: right;
+  opacity: 0.1;
+  text-transform: uppercase;
 }

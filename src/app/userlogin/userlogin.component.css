@@ -6,8 +6,7 @@
   height: 100vh;
   top: 0;
   width: 100%;
-   background: linear-gradient(135deg, rgb(187, 150, 255) 0%, rgb(102, 108, 255) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#025eb3', endColorstr='#002247', GradientType=1 );
+  background: linear-gradient(135deg, rgb(166, 128, 249) 0%, rgb(180, 238, 255) 100%);
 }
 
 .login-full-width {
@@ -16,9 +15,8 @@
   min-width: 200px;
 }
 
-svg
-{
-	max-width: 100%;
+svg {
+  max-width: 100%;
   max-height: 100vh;
   position: absolute;
   top: 0;
@@ -26,59 +24,59 @@ svg
   transform: translate(-50%, 0);
 }
 
-circle
-{
-	stroke: #025aac;
-	fill: transparent;
-	stroke-dasharray: 1.5708; /* ½π */
+circle {
+  stroke: #025aac;
+  fill: transparent;
+  stroke-dasharray: 1.5708;
+  /* ½π */
 }
 
-#rotate-clockwise, #rotate-counter-clockwise
-{
-	animation: 6s linear infinite;
+#rotate-clockwise, #rotate-counter-clockwise {
+  animation: 6s linear infinite;
 }
 
-#rotate-clockwise
-{
-	animation-name: rotation-clockwise;
+#rotate-clockwise {
+  animation-name: rotation-clockwise;
 }
 
-#rotate-counter-clockwise
-{
-	animation-name: rotation-counter-clockwise;
+#rotate-counter-clockwise {
+  animation-name: rotation-counter-clockwise;
 }
 
-@keyframes rotation-clockwise
-{
-	from { transform: rotate(0) }
-	to   { transform: rotate(360deg) }
+@keyframes rotation-clockwise {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
 }
 
-@keyframes rotation-counter-clockwise
-{
-	from { transform: rotate(360deg) }
-	to   { transform: rotate(0) }
+@keyframes rotation-counter-clockwise {
+  from {
+    transform: rotate(360deg)
+  }
+  to {
+    transform: rotate(0)
+  }
 }
 
-
-
-.mat-form-field-label, .mat-form-field-label-wrapper, .mat-input-element{
+.mat-form-field-label, .mat-form-field-label-wrapper, .mat-input-element {
   color: #0c1430;
 }
 
-.mat-raised-button.mat-primary[disabled]{
+.mat-raised-button.mat-primary[disabled] {
   color: #ae9eff;
 }
 
-
-.flex-outer{
+.flex-outer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
 
-.flex-logo{
+.flex-logo {
   background: url('../../assets/logo.png'), #0c1430;
   /* background-size: contain; */
   background-size: 400px;
@@ -87,11 +85,33 @@ circle
   background-position: 50% 50%;
 }
 
-.flex-50{
+.flex-50 {
   width: 50%;
 }
 
-
 .flex-50 .mat-raised-button.mat-primary {
   background-color: #570d9c;
+  min-width: 400px;
+}
+
+.btn-row{
+  margin-top: 20px;
+}
+
+.social-login{
+  width: 100%;
+  text-align: center;
+}
+
+.social-login .btn-google {
+  background: #dedede;
+  min-width: 64px;
+  line-height: 36px;
+  font-weight: 500;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: none;
+  color: #0c1430;
+  min-width: 400px;
+  margin-top: 15px;
 }

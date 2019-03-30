@@ -1,9 +1,8 @@
-
 <div class='flex-outer'>
-<div class='flex-50 flex-logo'></div>
-<div class='flex-50'>
-<form [formGroup]="loginform" class="example-form" (ngSubmit)='loginClick(loginform.value)' autocomplete="off">
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1 -1 2 2">
+  <div class='flex-50 flex-logo'></div>
+  <div class='flex-50'>
+    <form [formGroup]="loginform" class="example-form" (ngSubmit)='loginClick(loginform.value)' autocomplete="off">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1 -1 2 2">
       <g id="rotate-clockwise">
         <circle r="1" transform="scale(0.8)" stroke-width="0.025"/>
         <circle r="1" transform="scale(0.5)" stroke-width="0.04"/>
@@ -13,15 +12,19 @@
         <circle r="1" transform="scale(0.3333)" stroke-width="0.06"/>
       </g>
     </svg> -->
-  <mat-form-field class="login-full-width">
-    <input type='text' autocomplete="false" matInput formControlName="username" placeholder="username" value="">
-  </mat-form-field>
-  <mat-form-field class="login-full-width">
-    <input type='password' autocomplete="false" matInput formControlName="password" placeholder="password" value="">
-  </mat-form-field>
+      <mat-form-field class="login-full-width">
+        <input type='text' autocomplete="false" matInput formControlName="username" placeholder="username" value="">
+      </mat-form-field>
 
-  <button [disabled]="!loginform.valid"  type='submit' mat-raised-button color="primary">Login</button>
-
-</form>
-</div>
+      <mat-form-field class="login-full-width">
+        <input type='password' autocomplete="false" matInput formControlName="password" placeholder="password" value="">
+      </mat-form-field>
+      <div class="btn-row">
+        <button [disabled]="!loginform.valid" type='submit' mat-raised-button color="primary">Sign in</button>
+      </div>
+      <div class="btn-row social-login">
+        <button *ngIf="!user" class="btn-google" (click)="signInWithGoogle()" >Sign in with Google</button>
+      </div>
+    </form>
+  </div>
 </div>
