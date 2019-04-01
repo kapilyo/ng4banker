@@ -15,15 +15,17 @@ export class CardsDashboardComponent implements OnInit {
   statusCode: number;
   enableAddCard = false;
   cardForm;
+  transaction: any = {};
   selectedCard: Cards;
-
+  selectedCardIndex = 0;
+0
   constructor(private cardsService: CardsService) {}
 
   ngOnInit() {
     this.cardsService
       .getCards()
       .subscribe(
-        data => (this.cardsArray = data),
+        data => this.cardsArray = data,
         errorCode => (this.statusCode = errorCode)
       );
   }
@@ -48,7 +50,9 @@ export class CardsDashboardComponent implements OnInit {
       this.cardsService.saveCard(cardData).subscribe(data => console.log(data), errorCode => console.log(errorCode));
   }
 
-  onSelectCard(card: Cards) {
+  onSelectCard(card: Cards, i: number) {
+    this.selectedCardIndex = i;
     this.selectedCard = card;
+    this.cardsService.getCardDetailsbyId(card.card_id).subscribe(data => this.transaction = data, errorCode => console.log(errorCode));
   }
 }

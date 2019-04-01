@@ -1,11 +1,4 @@
 {
-  "articles": [
-    {
-      "id": 1,
-      "title": "Android AsyncTask Example",
-      "category": "Android"
-    }
-  ],
   "cards": [
     {
       "id": 1,
@@ -13,7 +6,8 @@
       "card_service": "sbi",
       "card_type": "debit",
       "card_name": "kapil2",
-      "card_num": "3454"
+      "card_num": "3454",
+      "balance": 735000
     },
     {
       "id": 2,
@@ -21,7 +15,8 @@
       "card_service": "icici",
       "card_type": "debit",
       "card_name": "kapil",
-      "card_num": "5463"
+      "card_num": "5463",
+      "balance": 120000
     },
     {
       "id": 3,
@@ -29,7 +24,8 @@
       "card_service": "canara",
       "card_type": "debit",
       "card_name": "kapil3",
-      "card_num": "5463"
+      "card_num": "5463",
+      "balance": 28000
     },
     {
       "id": 4,
@@ -37,15 +33,51 @@
       "card_service": "hdfc",
       "card_type": "credit",
       "card_name": "kapil4",
-      "card_num": "5463"
+      "card_num": "5463",
+      "balance": 15000
     },
     {
       "card_service": "Andhra",
       "card_type": "debit",
-      "card_name": "Kapil json",
+      "card_name": "Kapil jsond",
       "card_num": "6583",
       "card_id": 5,
-      "id": 5
+      "id": 5,
+      "balance": 500000
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "card_id": 4,
+      "title": "Groceries",
+      "category": 5,
+      "income": false,
+      "amount": 8500
+    },
+    {
+      "id": 2,
+      "card_id": 4,
+      "title": "Milk",
+      "category": 6,
+      "income": false,
+      "amount": 550
+    },
+    {
+      "id": 3,
+      "card_id": 4,
+      "title": "Alcohol",
+      "category": 7,
+      "income": false,
+      "amount": 5500
+    },
+    {
+      "id": 4,
+      "card_id": 4,
+      "title": "Rent",
+      "category": 7,
+      "income": false,
+      "amount": 15000
     }
   ]
 }

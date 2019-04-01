@@ -9,17 +9,15 @@
 }
 
 .cards-outer-block {
-  padding: 20px;
-  width: 30%;
+  width: 260px;
   max-width: 320px;
   perspective: 1200px;
 }
 
 .card-block {
-  max-width: 220px;
-  min-height: 100px;
+  width: 230px;
   color: #fff;
-  margin: 15px;
+  margin: 15px 15px 15px 15px;
   padding: 15px;
   background: linear-gradient(to right, #4684d2, #707af1);
   border-radius: 10px;
@@ -31,8 +29,8 @@
 
 .card-block.selected {
   background: linear-gradient(to right, #f76f6f, #b34f4f);
-  max-width: 240px;
-  min-height: 110px;
+  width: 240px;
+  margin-left: 30px;
   /* transform: rotateY(20deg); */
 }
 
@@ -138,7 +136,7 @@ span.cross {
 .card-block ul li.card-num {
   letter-spacing: 3px;
   text-align: center;
-  margin: 20px 0px;
+  margin: 15px 0px;
 }
 
 .card-type {
@@ -161,4 +159,40 @@ span.cross {
   text-align: right;
   opacity: 0.1;
   text-transform: uppercase;
+}
+
+
+.cards-container{
+  width: 100%;
+  padding: 30px;
+}
+
+.cards-detail-section{
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.cards-detail-block{
+  padding: 5px 15px;
+  flex: 5 auto;
+}
+
+.cards-overview-block{
+  box-shadow: 4px 0 14px -20px #000000, inset -4px 0px 16px -20px #000000;
+  border-right: 1px solid #f5f5f5;
+  flex: 1 auto;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.cards-overview-block h1{
+  font-size: 60px;
+    color: #ff7474;
+    text-shadow: 0px 8px 9px #e0baba;
+    margin: 5px 0px;
+}
+
+.cards-overview-block ul{
+list-style: none;
 }

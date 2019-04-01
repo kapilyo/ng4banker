@@ -29,6 +29,7 @@ import { GoogleLoginProvider } from 'angularx-social-login';
 
 
 import { from } from 'rxjs';
+import { AnimateCountDirective } from './directives/animate-count.directive';
 
 const appRoutes: Routes = [
   {
@@ -68,7 +69,8 @@ export function provideConfig() {
     UserloginComponent,
     MainpageComponent,
     CardsDashboardComponent,
-    CardPipe
+    CardPipe,
+    AnimateCountDirective
   ],
   imports: [
     BrowserModule,
