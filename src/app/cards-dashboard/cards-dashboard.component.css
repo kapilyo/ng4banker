@@ -2,7 +2,11 @@
   /* background: #151936; */
   /* background-image: linear-gradient(to right, #b2e1e8, #c5a6a6); */
   /* background: linear-gradient(135deg, rgb(208, 189, 249) 0%, rgb(125, 226, 255) 100%); */
-  background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(202, 202, 202) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(255, 255, 255) 0%,
+    rgb(202, 202, 202) 100%
+  );
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -114,7 +118,7 @@ span.cross {
 }
 
 .master-card {
-  background-image: url('../../assets/mastercard.png');
+  background-image: url("../../assets/mastercard.png");
   width: 60px;
   background-size: contain;
   display: block;
@@ -124,7 +128,7 @@ span.cross {
 }
 
 .visa-card {
-  background-image: url('../../assets/logo-visa.png');
+  background-image: url("../../assets/logo-visa.png");
   width: 60px;
   background-size: contain;
   display: inline-block;
@@ -149,7 +153,7 @@ span.cross {
   opacity: 0.5;
 }
 
-.card-service::after{
+.card-service::after {
   position: absolute;
   content: attr(title);
   width: 110px;
@@ -161,24 +165,23 @@ span.cross {
   text-transform: uppercase;
 }
 
-
-.cards-container{
+.cards-container {
   width: 100%;
   padding: 30px;
 }
 
-.cards-detail-section{
+.cards-detail-section {
   padding: 5px 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.cards-detail-block{
+.cards-detail-block {
   padding: 5px 15px;
   flex: 5 auto;
 }
 
-.cards-overview-block{
+.cards-overview-block {
   box-shadow: 4px 0 14px -20px #000000, inset -4px 0px 16px -20px #000000;
   border-right: 1px solid #f5f5f5;
   flex: 1 auto;
@@ -186,13 +189,50 @@ span.cross {
   padding-right: 30px;
 }
 
-.cards-overview-block h1{
+.cards-overview-block h1 {
   font-size: 60px;
-    color: #ff7474;
-    text-shadow: 0px 8px 9px #e0baba;
-    margin: 5px 0px;
+  color: #ff7474;
+  text-shadow: 0px 8px 9px #e0baba;
+  margin: 5px 0px;
 }
 
-.cards-overview-block ul{
-list-style: none;
+.cards-overview-block ul {
+  list-style: none;
+}
+
+.category-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  color: #83719e;
+  border-bottom: 1px solid #efefef;
+  box-shadow: 0px 6px 10px -8px #ccc;
+}
+
+.category-icon {
+  flex: 1 auto;
+  max-width: 90px;
+  text-align: center;
+  height: 100%;
+  padding: 5px;
+}
+
+.category-icon label{
+  display: block;
+  font-size: 11px;
+}
+
+.category-icon .material-icons{
+  color: #a090b9
+}
+
+.category-detail {
+  flex: 6 auto;
+  font-size: 13px
+}
+
+.category-detail p {
+  margin: 0;
 }

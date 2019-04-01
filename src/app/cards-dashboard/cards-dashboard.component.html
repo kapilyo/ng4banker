@@ -1,6 +1,11 @@
 <section class="cards-section">
   <div class="cards-outer-block">
-    <div *ngFor="let card of cardsArray; let i = index" class="card-block"  [class.selected]="i === selectedCardIndex" (click)="onSelectCard(card,i)" >
+    <div
+      *ngFor="let card of cardsArray; let i = index"
+      class="card-block"
+      [class.selected]="i === selectedCardIndex"
+      (click)="onSelectCard(card, i)"
+    >
       <ul>
         <li>
           <span class="visa-card"></span>
@@ -50,7 +55,6 @@
           value=""
         />
 
-
         <input
           type="text"
           formControlName="card_num"
@@ -72,10 +76,31 @@
         </ul>
       </div>
       <div class="cards-detail-block">
-        <ul>
-            <li>{{transaction.id}}</li>
-            <li>{{transaction.title}}</li>
-          </ul>
+        <div  *ngIf='transaction.id' >
+        <span class="hidden">{{ transaction.id }}</span>
+
+        <div class="category-block" *ngFor="let item of transaction.items">
+          <div class="category-icon">
+            <i
+              *ngIf="item.category == 7; else elseBlock"
+              class="material-icons"
+            >
+              add_shopping_cart
+            </i>
+            <ng-template #elseBlock
+              ><i class="material-icons">
+                fastfood
+              </i>
+            </ng-template>
+            <label>{{ item.title }}</label>
+          </div>
+          <div class="category-detail">
+            <p>{{ item.category }}</p>
+            <p>{{ item.income }}</p>
+            <p>{{ item.amount }}</p>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>

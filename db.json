@@ -49,35 +49,41 @@
   "transactions": [
     {
       "id": 1,
-      "card_id": 4,
-      "title": "Groceries",
-      "category": 5,
-      "income": false,
-      "amount": 8500
-    },
-    {
-      "id": 2,
-      "card_id": 4,
-      "title": "Milk",
-      "category": 6,
-      "income": false,
-      "amount": 550
-    },
-    {
-      "id": 3,
-      "card_id": 4,
-      "title": "Alcohol",
-      "category": 7,
-      "income": false,
-      "amount": 5500
-    },
-    {
-      "id": 4,
-      "card_id": 4,
-      "title": "Rent",
-      "category": 7,
-      "income": false,
-      "amount": 15000
+      "card_id": 1,
+      "items": [
+        {
+          "id": 1,
+          "card_id": 4,
+          "title": "Groceries",
+          "category": 5,
+          "income": false,
+          "amount": 8500
+        },
+        {
+          "id": 2,
+          "card_id": 4,
+          "title": "Milk",
+          "category": 6,
+          "income": false,
+          "amount": 550
+        },
+        {
+          "id": 3,
+          "card_id": 4,
+          "title": "Alcohol",
+          "category": 7,
+          "income": false,
+          "amount": 5500
+        },
+        {
+          "id": 4,
+          "card_id": 4,
+          "title": "Rent",
+          "category": 7,
+          "income": false,
+          "amount": 15000
+        }
+      ]
     }
   ]
 }

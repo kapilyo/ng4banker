@@ -1,4 +1,4 @@
-.example-form {
+.login-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +6,8 @@
   height: 100vh;
   top: 0;
   width: 100%;
-  background: linear-gradient(135deg, rgb(166, 128, 249) 0%, rgb(180, 238, 255) 100%);
+  background: #ffffff;
+  /* background: linear-gradient(135deg, rgb(166, 128, 249) 0%, rgb(180, 238, 255) 100%); */
 }
 
 .login-full-width {
@@ -104,14 +105,13 @@ circle {
 }
 
 .social-login .btn-google {
-  background: #dedede;
-  min-width: 64px;
+  background: #d04e4e;
   line-height: 36px;
   font-weight: 500;
   padding: 0 16px;
   border-radius: 4px;
   border: none;
-  color: #0c1430;
+  color: #ffffff;
   min-width: 400px;
   margin-top: 15px;
 }
